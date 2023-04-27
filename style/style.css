@@ -1,0 +1,574 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
+}
+.nav-main {
+  background-color: #fff;
+
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+.btn-toggle-nav {
+  width: 60px;
+  height: 100%;
+  cursor: pointer;
+  background-color: #f98f39;
+  margin-right: 10px;
+}
+.btn-toggle-nav:hover {
+  background-color: #111;
+}
+
+.nav-main h3 {
+  line-height: 60px;
+}
+.nav-main ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+.nav-main ul li {
+  list-style: none;
+  line-height: 60px;
+}
+
+.nav-main ul li a {
+  display: block;
+  height: 100%;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial;
+}
+.nav-main ul li a:hover {
+  color: #f98f39;
+}
+
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: calc(100vh - 60px);
+  background-color: #1b1b1b;
+  z-index: 1000;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.nav-sidebar ul {
+  padding: 15px 0;
+}
+
+.nav-sidebar ul li {
+  line-height: 60px;
+  list-style: none;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  height: 60px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-family: arial;
+  font-size: 16pxl;
+}
+.nav-sidebar ul li a:hover {
+  color: #f98f39;
+}
+/* Homepage section 1 */
+
+.section {
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 80px;
+  overflow: hidden;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px 20px 40px;
+  /* margin-bottom: 50px; */
+}
+
+.btn button {
+  display: block;
+  padding: 15px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px black;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e1f5c;
+  width: 100%;
+  margin-bottom: 18px;
+  scale: 0.97;
+}
+button:hover {
+  background-color: #d8c2ed;
+  color: black;
+  scale: 1;
+}
+.h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  /* padding: 80px 10px 20px 10px; */
+  text-shadow: 2px 5px black;
+  font-weight: 1000;
+}
+.h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+/*ending of Homepage section 1 */
+/* image */
+
+.image1 {
+  display: block;
+  width: 80%;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.image2 {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* pop */
+.pop-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50% -50%);
+  width: 300px;
+  height: 200px;
+  background-color: black;
+  display: flex;
+}
+/* end pop */
+
+/** section2 **/
+.sec2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin-bottom: 50px;
+}
+.sec2 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.sec2 div {
+  width: 100%;
+}
+.sec2 p {
+  color: #222;
+  width: 300px;
+  /* padding: 0 auto; */
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+/** section2 **/
+
+/** Footer **/
+footer {
+  text-align: center;
+}
+footer p {
+  font-size: 17px;
+}
+footer button {
+  font-size: 1.5rem;
+  background-color: #5927c4;
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 2px 4px 3px 4px #888;
+  outline: none;
+  margin-bottom: 10px;
+  scale: 0.9;
+  position: fixed;
+  bottom: 10px;
+  right: 13px;
+}
+footer button:hover {
+  scale: 1;
+}
+footer button .bell {
+  color: white;
+}
+
+.daily {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  width: 70%;
+}
+.daily h1 {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.daily div {
+  width: 100%;
+}
+.daily h3 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vision {
+  visibility: visible;
+}
+.sidebar-link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.sidebar-link a:hover {
+  color: #222;
+}
+
+.messages {
+  background-color: #170826;
+  padding: 5px;
+  width: 100%;
+  color: #ecec;
+  /* height: 200px; */
+  /* overflow: scroll; */
+}
+.messages h3 {
+  font-size: 25px;
+}
+.messages span {
+  font-size: 20px;
+}
+
+@media (min-width: 701px) {
+  .sec2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+  }
+  .sec2 h1 {
+    font-size: 3.9rem;
+    margin-bottom: 15px;
+  }
+  .sec2 div {
+    width: 100%;
+  }
+  .sec2 p {
+    color: #222;
+    width: 800px;
+    /* padding: 0 auto; */
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+  .daily {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+  }
+  .daily h1 {
+    font-size: 1.9rem;
+    font-family: sans-serif;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+  .daily div {
+    width: 100%;
+  }
+  .daily h3 {
+    margin: 0 auto;
+  }
+  .messages {
+    padding: 5px;
+    width: 80%;
+    color: #ecec;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .messages h3 {
+    font-size: 28px;
+    margin-right: 5px;
+  }
+  .messages span {
+    color: white;
+    font-size: 23px;
+  }
+  .all {
+    visibility: hidden;
+  }
+}
+@media (max-width: 650px) {
+  header {
+    background-color: #98b0b8;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: 0;
+  }
+
+  .menubody {
+    display: inline;
+  }
+  .menu-icon {
+    visibility: visible;
+    /* float: right; */
+    /* position: absolute; */
+    z-index: 1;
+    color: black !important;
+    font-size: 2rem;
+  }
+
+  .h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 0px 10px;
+    text-shadow: 5px 2px black;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+  }
+
+  .bi {
+    color: white;
+    font-size: 19px;
+  }
+  #bi {
+    font-size: 28px;
+  }
+  .daily {
+    background-color: #5927c4;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+  }
+  .daily h1 {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    color: #111;
+    text-decoration: none;
+  }
+  .daily div {
+    width: 100%;
+  }
+  .daily h3 {
+    margin: 5px auto;
+    color: rgb(218, 187, 187);
+    font-size: 18px;
+  }
+  .messages {
+    background-color: #561f5c;
+
+    padding: 5px;
+    width: 100%;
+    color: #111;
+    margin: 0 auto;
+    /* height: 200px; */
+    /* overflow: scroll; */
+  }
+  .messages h3 {
+    margin-right: 5px;
+  }
+  .messages span {
+    color: white;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .link a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 5px;
+    padding-right: 15px;
+    text-decoration: none;
+  }
+  .link a span {
+    color: #ecec;
+    font-size: 15px;
+  }
+  .believe {
+    height: ;
+    text-align: center;
+  }
+  .believe h2 {
+    margin-top: 10px;
+  }
+  #downloadbtn {
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .comment {
+    height: 200px;
+    padding: 10px;
+  }
+  #textarea {
+    height: 60px;
+    width: 100%;
+  }
+  .image1 {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+  }
+  .image2,
+  .image3 {
+    object-position: center;
+    object-fit: cover;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .nav-main {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+  }
+  .nav-main ul {
+    visibility: hidden;
+  }
+  .section {
+    width: 100%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    /* margin-top: 100px; */
+    /* padding: 50px 5px 0px 5px; */
+    overflow: hidden;
+  }
+  .section h1 {
+    color: #222;
+    font-size: ;
+    font-family: Arial;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 80%;
+    text-align: center;
+  }
+  .article1 {
+    width: 100%;
+  }
+  .article1 h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .article1 div {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .article1 ul {
+    list-style-type: decimal;
+    font-size: 20px;
+  }
+  .article1 ul li {
+    margin-bottom: 10px;
+  }
+  .article1 ul li:nth-child(2) {
+    color: green;
+  }
+  .article1 ul li:nth-child(4) {
+    color: green;
+  }
+  .article2 {
+    margin-bottom: 20px;
+  }
+
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: all 0.4s;
+    font-size: 20px;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active,
+  .accordion:hover {
+    background-color: #ccc;
+    transition: ease-in-out 0.4s;
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 5px 18px;
+    background-color: white;
+    display: none;
+    height: 200px;
+    overflow: scroll;
+  }
+  .btn-toggle-nav {
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+    background-image: url("images/sidebar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+  }
+  .btn-toggle-nav:hover {
+    background-color: #111;
+  }
+}

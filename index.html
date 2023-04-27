@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bible Verse</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bible verse</h1>
+      <div class="section">
+        <form onsubmit="submit()">
+          <input
+            type="text"
+            required
+            placeholder="Name: "
+            id="firstname"
+            class="text"
+          />
+          <input
+            type="email"
+            placeholder="Email:"
+            id="text-email"
+            class="text"
+            required
+          />
+
+          <input type="button" value="LOGIN" id="enter" class="btn" />
+
+          <p class="alert"></p>
+        </form>
+      </div>
+    </div>
+    <script>
+      let message = document.querySelector(".alert");
+
+      function ofFunction() {
+        setTimeout(function () {
+          message.classList.remove("warn-style");
+        }, 3000);
+      }
+      // function remove() {
+      //   let message = document.querySelector(".alert");
+
+      //   message.classList.remove("warn-style");
+      // }
+      // setTimeout(remove, 3000);
+      document.querySelector("#enter").addEventListener("click", () => {
+        let name = document.getElementById("firstname");
+
+        let email = document.getElementById("text-email");
+        if (name.value == "" && email.value == "") {
+          message.textContent = "Enter Name and Email";
+          message.classList.add("warn-style");
+          ofFunction();
+        } else {
+          window.location.href = "loadingpage/loading.html";
+        }
+      });
+      // function submit() {
+      //   event.preventDefault();
+
+      //   window.location.href = "loadingpage/loading.html";
+      //   // }
+      // }
+    </script>
+
+    <!-- <script src="login.js"></script> -->
+  </body>
+</html>

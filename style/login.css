@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #060d1a;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+#check {
+  font-size: 2rem;
+  position: relative;
+}
+.container {
+  flex-direction: column;
+  width: 100%;
+}
+.section {
+  line-height: 75px;
+  text-align: center;
+  background-color: #316f7d;
+  padding: 7px;
+  width: 100%;
+  border-radius: 8px;
+}
+input {
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+}
+#text-email {
+  text-transform: none;
+}
+#signup-btn {
+  background-color: transparent;
+  width: 100px;
+  height: 34px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+#signup-btn:hover {
+  color: blue;
+}
+.btn {
+  background-color: #c5d3eb;
+  width: 150px;
+  height: 34px;
+  border: none;
+  border-radius: 7px;
+  padding: 2px 0px 5px 5px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.btn:hover {
+  color: #0a101a;
+}
+.text {
+  width: 100%;
+  padding-left: 15px;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  color: black;
+  transition: 0.5s ease;
+}
+
+span {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+span a {
+  color: burlywood;
+}
+.alert {
+  visibility: hidden;
+  line-height: 1;
+}
+.warn-style {
+  visibility: visible;
+  color: black;
+  fill-opacity: 0.2;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+h1 {
+  color: #dfe1e6;
+  font-size: 3em;
+  font-family: cursive;
+}
+@media (max-width: 700px) {
+  input {
+    text-transform: uppercase;
+    width: 100%;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+  .text {
+    width: 100%;
+    padding-left: 3px;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    color: black;
+    transition: 0.4s ease;
+  }
+
+  .warn-style {
+    visibility: visible;
+    color: rgba(85, 0, 0, 0.872);
+    fill-opacity: 0.2;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+  h1 {
+    color: #dfe1e6;
+    font-size: 1.5em;
+    font-family: cursive;
+  }
+  #signup-btn {
+    background-color: transparent;
+    width: 100px;
+    height: 34px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+  #signup-btn:hover {
+    color: blue;
+  }
+  .btn {
+    background-color: #c5d3eb;
+    width: 150px;
+    height: 34px;
+    border: none;
+    border-radius: 7px;
+    padding: 2px 0px 5px 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .btn:hover {
+    color: #0a101a;
+  }
+}
