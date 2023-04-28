@@ -39,7 +39,7 @@
         <li><a href="#pages/">Portfolio</a></li>
         <li><a href="#pages/about.html">About us</a></li>
         <li><a href="#pages/contact.html">Contact Us</a></li>
-        <li><a href="index.html">Log Out</a></li>
+        <li><a href="login-page.html">Log Out</a></li>
       </ul>
     </aside>
 
@@ -223,6 +223,28 @@
       </div>
     </div>
     <img class="image3" src="images/image3.jpg" alt="" />
+    <div class="article3">
+      <h2>Have you prayed today</h2>
+      <p>Click here to say a prayer</p>
+      <button onclick="typeWriter()">Pray</button>
+      <p id="prayer" style="font-size: 20px"></p>
+    </div>
+    <div class="container">
+      <div class="box">
+        <input
+          style="display: none"
+          name="text"
+          type="text"
+          id="inputText"
+          value="In the mighty name of Jesus, Heavenly Father, King of Kings and the lord of lords. I thank you for the gift of life, I thank you for making me to sleep and wake up may your name be highly exalted. Father please see me through today, I commit everything into your hands. In Jesus name I pray. AMEN. Please do not forget the three keys as a christain which is Holiness, Righteousness and Salvation. If you have any issue you can always reach us. have a wonderful day"
+          ;
+        />
+        <span id="voiceIco"></span>
+      </div>
+      <button id="convert">Prayer in audio 🔊</button>
+      <div><span>once it is done you can pause it</span></div>
+    </div>
+
     <footer>
       <div>
         You can
@@ -237,10 +259,96 @@
           >Email</a
         >
       </div>
-      <p>&copy;2022 Bibleverse.com all right reserved Dahez</p>
+
+      <p>&copy;2023 Bibleverse.com all right reserved Dahez</p>
     </footer>
 
-    <!--  <section class="daily">
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    <script>
+      var i = 0;
+      var txt =
+        "In the mighty name of Jesus, Heavenly Father, King of Kings and the lord of lords. I thank you for the gift of life, for making me to sleep and wake up may your name be highly exalted. Father please see me through today, I commit everything into your hands. In Jesus name I pray. AMEN";
+      var speed = 60;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("prayer").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      var convert = document.getElementById("convert"),
+        // voiceIco = document.getElementById("voiceIco"),
+        speech = document.getElementById("inputText"),
+        count = 1;
+
+      speech.addEventListener("change", function () {
+        speechText = this.value;
+        speechSynthesis.cancel();
+        convert.innerHTML = "Text to Speech";
+        // voiceIco.innerHTML = "🔈";
+      });
+      convert.addEventListener("click", function () {
+        if (!speechSynthesis.speaking || speechSynthesis.pause()) {
+          speechText = speech.value;
+          var speechVoice = new SpeechSynthesisUtterance();
+          var voices = speechSynthesis.getVoices();
+          speechVoice.voice = voices[2];
+          speechVoice.text = speechText;
+          speechVoice.lang = "en-US";
+          speechSynthesis.speak(speechVoice);
+        }
+
+        if (count == 1) {
+          convert.innerHTML = "Close your Eyes";
+          // voiceIco.innerHTML = "🔊";
+          speechSynthesis.resume();
+          setTimeout(() => {
+            count = 1;
+          }, 200);
+        } else {
+          speechSynthesis.paused;
+          convert.innerHTML = "Pause";
+          // voiceIco.innerHTML = "🔈";
+          count = 1;
+        }
+        setInterval(() => {
+          if (!speechSynthesis.speaking && count == 1) {
+            convert.innerHTML = "God Bless You";
+            // voiceIco.innerHTML = "🔈";
+            count = 1;
+            console.log(count);
+          }
+        }, 100);
+      });
+
+      /*for(xx in new SpeechSynthesisUtterance()){
+  console.log(xx)
+}*/
+    </script>
+  </body>
+</html>
+
+<!-- <div class="all">
+  <div class="bod">
+    <div class="link">
+      <a href="#"><i class="bi bi-house"></i><span>HOME</span></a>
+      <a href="pages/about.html"
+        ><i class="bi bi-person"></i><span>ABOUT</span></a
+      >
+      <a href="pages/contact.html"
+        ><i class="bi bi-telephone"></i><span>CONTACT</span></a
+      >
+      <a href="pages/mood.html"
+        ><i class="bi bi-code"></i><span>BLOG</span></a
+      >
+    </div>
+  </div>
+</div> -->
+
+<!--  <section class="daily">
       <div class="messages">
         <h1>Daily Bible Verses</h1>
         <h3>
@@ -302,31 +410,9 @@
  
      -->
 
-    <!-- <footer>
+<!-- <footer>
       -- <button onclick="requestPermission()">
         <i class="bi bi-bell-fill bell"></i>
       </button> --
-      <p>&copy;2022 Bibleverse.com all right reserved Dahez</p>
+      <p>&copy;2023 Bibleverse.com all right reserved Dahez</p>
     </footer> -->
-
-    <script src="script.js"></script>
-    <script src="login.js"></script>
-  </body>
-</html>
-
-<!-- <div class="all">
-  <div class="bod">
-    <div class="link">
-      <a href="#"><i class="bi bi-house"></i><span>HOME</span></a>
-      <a href="pages/about.html"
-        ><i class="bi bi-person"></i><span>ABOUT</span></a
-      >
-      <a href="pages/contact.html"
-        ><i class="bi bi-telephone"></i><span>CONTACT</span></a
-      >
-      <a href="pages/mood.html"
-        ><i class="bi bi-code"></i><span>BLOG</span></a
-      >
-    </div>
-  </div>
-</div> -->
