@@ -541,8 +541,6 @@ footer button .bell {
     border: none;
     outline: none;
     transition: all 0.4s;
-    text-decoration: underline;
-    color: blue;
     font-size: 20px;
   }
 
@@ -573,4 +571,85 @@ footer button .bell {
   .btn-toggle-nav:hover {
     background-color: #111;
   }
+
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+  }
+
+  #inputText {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    resize: none;
+    font-size: 20px;
+    font-family: arial;
+    box-shadow: 0 0 5px #8c8c8c;
+    border: 3px solid #8c8c8c;
+    border-radius: 10px;
+    outline: 0;
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  #voiceIco {
+    font-size: 150px;
+    width: 210px;
+    text-align: left;
+  }
+  #convert {
+    padding: 15px 35px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    background: #05737f;
+    color: #fff;
+  }
+  .article3 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .article3 p {
+    font-family: arial;
+    word-spacing: 3px;
+  }
+  .article3 button {
+    padding: 5px 10px;
+    border: 2px solid black;
+    font-weight: bold;
+    margin: 10px 0;
+    outline: none;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .accordion{
+    animation: color 4s linear infinite;
+
+  }
+  @keyframes color {
+    0% {
+     opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+      color: blue;
+
+    }
 }
